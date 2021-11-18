@@ -1,11 +1,20 @@
 from crontab import CronTab
-import TestParseRead
+from croniter import croniter
+from datetime import datetime
+import logging
+import TestConfigRead
+import os
 
-cron = CronTab(tabfile=TestParseRead.get_parth(), user=False)
+cron = CronTab(TestConfigRead.get_data()['USER'])
+date_today = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+logging.basicConfig(filename=TestConfigRead.get_data()['LOG_PATH'],
+                    level=TestConfigRead.get_data()['LEVEL'])
 
-for cronitem in cron:
-    cronitemstr = str(cronitem)
-    time_cron = cronitemstr.split()
-    time_cron = time_cron[0]+" "+time_cron[1]+" "+time_cron[2]+" "+time_cron[3]+" "+time_cron[4]
-    print("Time: "+time_cron)
-    print("Command: "+cronitemstr[len(time_cron):].lstrip())
+for item in cron:
+    try:
+        item_time=str(item[0])+" "+str(item[1])+" "+str(item[2])+" "+str(item[3])+" "+str(item[4])
+        if croniter.match(item_time, date_today):
+            os.system(item.command)
+    except Exception as ex:
+        logging.error('Time: '+datetime.date.today+'\nLog: '+ex)
+
