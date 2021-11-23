@@ -1,0 +1,6 @@
+59 23 28 2 * bash Check29February.sh
+0 4 * * SUN echo 'Every hour' >> /home/test
+0 * * * * echo 'Every hour' >> /home/test
+0 0 9-15 */2 * python3 SendEmail.py
+1 4 25-31 10 * bash ChangeTimeWinter.sh
+0 3 25-31 3 * bash ChangeTimeSummer.sh

@@ -1,0 +1,19 @@
+2021-11-23 12:55:52,206 - ConfigWrite.py - Path was splitted
+2021-11-23 12:55:52,207 - ConfigWrite.py - Config_data was created
+2021-11-23 12:55:52,207 - ConfigRead.py - Path was splitted
+2021-11-23 12:55:52,209 - ConfigWrite.py - data_file.json was created
+2021-11-23 12:55:52,210 - ConfigRead.py - Path was splitted
+2021-11-23 12:55:52,212 - MainParseCrontab.py - {'CRON_PATH': '/media/sf_VB/Cron/crontab', 'LOG_FORMAT': '%(asctime)s - %(filename)s - %(message)s', 'LOG_LEVEL': 20}
+2021-11-23 12:55:52,214 - MainParseCrontab.py - The cron-file has been read
+2021-11-23 12:55:52,216 - MainParseCrontab.py - Cron time: 59 23 28 2 *
+2021-11-23 12:55:52,216 - MainParseCrontab.py - Cron command: bash Check29February.sh
+2021-11-23 12:55:52,221 - MainParseCrontab.py - Cron time: 0 4 * * SUN
+2021-11-23 12:55:52,224 - MainParseCrontab.py - Cron command: echo 'Every hour' >> /home/test
+2021-11-23 12:55:52,225 - MainParseCrontab.py - Cron time: @hourly
+2021-11-23 12:55:52,225 - MainParseCrontab.py - Cron command: echo 'Every hour' >> /home/test
+2021-11-23 12:55:52,226 - MainParseCrontab.py - Cron time: 0 0 9-15 */2 *
+2021-11-23 12:55:52,226 - MainParseCrontab.py - Cron command: python3 SendEmail.py
+2021-11-23 12:55:52,227 - MainParseCrontab.py - Cron time: 1 4 25-31 10 *
+2021-11-23 12:55:52,228 - MainParseCrontab.py - Cron command: bash ChangeTimeWinter.sh
+2021-11-23 12:55:52,229 - MainParseCrontab.py - Cron time: 0 3 25-31 3 *
+2021-11-23 12:55:52,236 - MainParseCrontab.py - Cron command: bash ChangeTimeSummer.sh

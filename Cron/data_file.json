@@ -1,0 +1,5 @@
+{
+  "CRON_PATH": "/media/sf_VB/Cron/crontab",
+  "LOG_FORMAT": "%(asctime)s - %(filename)s - %(message)s",
+  "LOG_LEVEL": 20
+}
